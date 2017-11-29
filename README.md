@@ -1,10 +1,18 @@
 # ring-http-header-session
 
-A Clojure library designed to ... well, that part is up to you.
+Similar to ring session middleware, using HTTP Header, instead of HTTP Cookie.
+
+## Installation
+
+    [tendant/ring-http-header-session "0.1.0"]
 
 ## Usage
 
-FIXME
+    (require '[ring.middleware.http-header-session :as http-header-session])
+    (require '[ring.middleware.session.memory :as mem])
+    
+    (http-header-session/wrap-http-header-session app {:store (mem/memory-store)
+                                                       :header-name "x-http-header-session"})
 
 ## License
 
