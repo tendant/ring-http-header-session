@@ -1,4 +1,4 @@
-(defproject tendant/ring-http-header-session "0.1.0"
+(defproject tendant/ring-http-header-session "0.1.1-SNAPSHOT"
   :description "Similar to ring session middleware, using http header mainly for mobile apps, instead of http cookie."
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
