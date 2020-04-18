@@ -14,7 +14,8 @@
    (let [req-key (get-in request [:headers header-name])
          session (store/read-session store req-key)
          session-key (if session req-key)]
-     (merge request {:session (or session {})
+     (merge request {:session (or (merge (:session request) session)
+                                  {})
                      :session/key session-key}))))
 
 (defn- session-response
